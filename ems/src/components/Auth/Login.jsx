@@ -1,23 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const submitHandler = (e) => {
+    console.log("hello brother its done", email, password);
+    setEmail("");
+    setPassword("");
+
+    e.preventDefault();
+  };
   return (
     <div className="flex items-center justify-center h-screen w-screen">
       <div className="border-2 border-emerald-600 p-20">
-        <form className="flex flex-col items-center justify-center">
+        <form
+          className="flex flex-col items-center justify-center"
+          onSubmit={(e) => {
+            submitHandler(e);
+          }}
+        >
           <input
-            className="text-black outline-none bg-transparent place-holder:text-white border-2 border-emerald-600 rounded-full py-4 px-3 text-xl"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            required
+            className="outline-none bg-transparent place-holder:text-white border-2 border-emerald-600 rounded-full py-4 px-3 text-xl"
             type="email"
             name=""
             id=""
             placeholder="Enter your email"
           />
           <input
-            className="text-black mt-3 outline-none bg-transparent place-holder:text-gray-400 border-2 border-emerald-600 rounded-full py-4 px-3 text-xl"
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+            required
+            className="mt-3 outline-none bg-transparent place-holder:text-gray-400 border-2 border-emerald-600 rounded-full py-4 px-3 text-xl"
             type="password"
             placeholder="Enter your password"
           />
-          <button className="text-white border-none  outline-none  place-holder:text-gray-400 border-2 bg-emerald-600 rounded-full py-4 px-3 text-xl mt-5">
+          <button className="text-white border-none  outline-none  place-holder:text-gray-400 border-2 bg-emerald-600 rounded-full py-4 px-3 text-xl mt-5 w-full">
             Log in
           </button>
         </form>
