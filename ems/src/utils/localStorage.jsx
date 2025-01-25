@@ -1,0 +1,248 @@
+const Employees = [
+  {
+    id: 1,
+    email: "employee1@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        title: "Prepare project report",
+        date: "2025-01-25",
+        category: "Documentation",
+        description: "Compile the project details and create a final report.",
+      },
+      {
+        active: false,
+        newTask: true,
+        completed: false,
+        failed: false,
+        title: "Update client feedback",
+        date: "2025-01-24",
+        category: "Communication",
+        description: "Incorporate client feedback into the presentation.",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        title: "Fix login bug",
+        date: "2025-01-20",
+        category: "Development",
+        description: "Resolve the issue with user login authentication.",
+      },
+    ],
+  },
+  {
+    id: 2,
+    email: "employee2@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        title: "Create test cases for feature X",
+        date: "2025-01-26",
+        category: "Testing",
+        description: "Develop comprehensive test cases for the new feature.",
+      },
+      {
+        active: false,
+        newTask: true,
+        completed: false,
+        failed: false,
+        title: "Prepare sprint backlog",
+        date: "2025-01-27",
+        category: "Management",
+        description: "Organize tasks and priorities for the upcoming sprint.",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        title: "Deploy staging build",
+        date: "2025-01-22",
+        category: "Operations",
+        description: "Deploy the latest build to the staging environment.",
+      },
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: true,
+        title: "Review pull requests",
+        date: "2025-01-25",
+        category: "Development",
+        description:
+          "Review and provide feedback on pull requests from developers.",
+      },
+    ],
+  },
+  {
+    id: 3,
+    email: "employee3@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        title: "Schedule team meeting",
+        date: "2025-01-23",
+        category: "Communication",
+        description: "Set up a team meeting to discuss project updates.",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        title: "Document API changes",
+        date: "2025-01-20",
+        category: "Documentation",
+        description: "Update the documentation to reflect recent API changes.",
+      },
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        title: "Analyze performance metrics",
+        date: "2025-01-28",
+        category: "Analytics",
+        description: "Analyze the performance metrics for the last quarter.",
+      },
+      {
+        active: false,
+        newTask: true,
+        completed: false,
+        failed: true,
+        title: "Update user guide",
+        date: "2025-01-29",
+        category: "Documentation",
+        description: "Revise and update the user guide for new features.",
+      },
+    ],
+  },
+  {
+    id: 4,
+    email: "employee4@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        title: "Plan marketing campaign",
+        date: "2025-01-30",
+        category: "Marketing",
+        description:
+          "Develop a strategy for the new product launch marketing campaign.",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        title: "Complete competitor analysis",
+        date: "2025-01-22",
+        category: "Research",
+        description: "Conduct a detailed analysis of competitor strategies.",
+      },
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        title: "Prepare webinar slides",
+        date: "2025-01-28",
+        category: "Presentation",
+        description: "Create engaging slides for the upcoming webinar.",
+      },
+    ],
+  },
+  {
+    id: 5,
+    email: "employee5@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        title: "Optimize database queries",
+        date: "2025-01-31",
+        category: "Development",
+        description: "Optimize database queries for better performance.",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        title: "Write unit tests",
+        date: "2025-01-23",
+        category: "Testing",
+        description: "Develop and execute unit tests for the new module.",
+      },
+      {
+        active: false,
+        newTask: true,
+        completed: false,
+        failed: true,
+        title: "Configure CI/CD pipeline",
+        date: "2025-01-29",
+        category: "Operations",
+        description: "Set up and configure the CI/CD pipeline for the project.",
+      },
+      {
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false,
+        title: "Update security patches",
+        date: "2025-01-25",
+        category: "Security",
+        description: "Apply the latest security patches to the system.",
+      },
+      {
+        active: false,
+        newTask: true,
+        completed: false,
+        failed: false,
+        title: "Review project timeline",
+        date: "2025-01-26",
+        category: "Management",
+        description: "Analyze the project timeline for potential risks.",
+      },
+    ],
+  },
+];
+
+const admin = [
+  {
+    id: 1,
+    email: "admin@example.com",
+    password: "123",
+  },
+];
+
+export const setLocalStorage = () => {
+  localStorage.setItem("employees", JSON.stringify(Employees));
+  localStorage.setItem("admin", JSON.stringify(admin));
+};
+
+export const getLocalStorage = () => {
+  const employees = JSON.parse(localStorage.getItem("employees"));
+  const admin = JSON.parse(localStorage.getItem("admin"));
+  //   console.log(data));
+};
