@@ -3,10 +3,10 @@ import Header from "../other/header";
 import CreateTask from "../other/createTask";
 import AllTask from "../other/AllTask";
 
-function AdminDashboard() {
+function AdminDashboard({ handleLogout }) {
   return (
     <div className="h-screen w-full p-10">
-      <Header />
+      <Header handleLogout={handleLogout} />
       <CreateTask />
       <AllTask />
     </div>

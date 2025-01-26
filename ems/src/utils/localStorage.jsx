@@ -1,10 +1,18 @@
 const Employees = [
   {
     id: 1,
-    email: "employee1@example.com",
+    name: "Employee One",
+    email: "e1@ex.c",
     password: "123",
+    taskCount: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 1,
+    },
     tasks: [
       {
+        taskNumber: 1,
         active: true,
         newTask: false,
         completed: false,
@@ -15,6 +23,7 @@ const Employees = [
         description: "Compile the project details and create a final report.",
       },
       {
+        taskNumber: 2,
         active: false,
         newTask: true,
         completed: false,
@@ -25,6 +34,7 @@ const Employees = [
         description: "Incorporate client feedback into the presentation.",
       },
       {
+        taskNumber: 3,
         active: false,
         newTask: false,
         completed: true,
@@ -34,14 +44,33 @@ const Employees = [
         category: "Development",
         description: "Resolve the issue with user login authentication.",
       },
+      {
+        taskNumber: 4,
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        title: "Organize team-building event",
+        date: "2025-01-27",
+        category: "Management",
+        description: "Plan a team-building activity for department morale.",
+      },
     ],
   },
   {
     id: 2,
-    email: "employee2@example.com",
+    name: "Employee Two",
+    email: "e2@ex.c",
     password: "123",
+    taskCount: {
+      active: 2,
+      newTask: 1,
+      completed: 1,
+      failed: 1,
+    },
     tasks: [
       {
+        taskNumber: 1,
         active: true,
         newTask: false,
         completed: false,
@@ -52,6 +81,7 @@ const Employees = [
         description: "Develop comprehensive test cases for the new feature.",
       },
       {
+        taskNumber: 2,
         active: false,
         newTask: true,
         completed: false,
@@ -62,6 +92,7 @@ const Employees = [
         description: "Organize tasks and priorities for the upcoming sprint.",
       },
       {
+        taskNumber: 3,
         active: false,
         newTask: false,
         completed: true,
@@ -72,6 +103,7 @@ const Employees = [
         description: "Deploy the latest build to the staging environment.",
       },
       {
+        taskNumber: 4,
         active: true,
         newTask: false,
         completed: false,
@@ -79,17 +111,24 @@ const Employees = [
         title: "Review pull requests",
         date: "2025-01-25",
         category: "Development",
-        description:
-          "Review and provide feedback on pull requests from developers.",
+        description: "Review and provide feedback on pull requests.",
       },
     ],
   },
   {
     id: 3,
-    email: "employee3@example.com",
+    name: "Employee Three",
+    email: "e3@ex.c",
     password: "123",
+    taskCount: {
+      active: 2,
+      newTask: 1,
+      completed: 1,
+      failed: 1,
+    },
     tasks: [
       {
+        taskNumber: 1,
         active: true,
         newTask: true,
         completed: false,
@@ -100,6 +139,7 @@ const Employees = [
         description: "Set up a team meeting to discuss project updates.",
       },
       {
+        taskNumber: 2,
         active: false,
         newTask: false,
         completed: true,
@@ -110,6 +150,7 @@ const Employees = [
         description: "Update the documentation to reflect recent API changes.",
       },
       {
+        taskNumber: 3,
         active: true,
         newTask: false,
         completed: false,
@@ -120,6 +161,7 @@ const Employees = [
         description: "Analyze the performance metrics for the last quarter.",
       },
       {
+        taskNumber: 4,
         active: false,
         newTask: true,
         completed: false,
@@ -131,106 +173,13 @@ const Employees = [
       },
     ],
   },
-  {
-    id: 4,
-    email: "employee4@example.com",
-    password: "123",
-    tasks: [
-      {
-        active: true,
-        newTask: false,
-        completed: false,
-        failed: false,
-        title: "Plan marketing campaign",
-        date: "2025-01-30",
-        category: "Marketing",
-        description:
-          "Develop a strategy for the new product launch marketing campaign.",
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        title: "Complete competitor analysis",
-        date: "2025-01-22",
-        category: "Research",
-        description: "Conduct a detailed analysis of competitor strategies.",
-      },
-      {
-        active: true,
-        newTask: true,
-        completed: false,
-        failed: false,
-        title: "Prepare webinar slides",
-        date: "2025-01-28",
-        category: "Presentation",
-        description: "Create engaging slides for the upcoming webinar.",
-      },
-    ],
-  },
-  {
-    id: 5,
-    email: "employee5@example.com",
-    password: "123",
-    tasks: [
-      {
-        active: true,
-        newTask: false,
-        completed: false,
-        failed: false,
-        title: "Optimize database queries",
-        date: "2025-01-31",
-        category: "Development",
-        description: "Optimize database queries for better performance.",
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        title: "Write unit tests",
-        date: "2025-01-23",
-        category: "Testing",
-        description: "Develop and execute unit tests for the new module.",
-      },
-      {
-        active: false,
-        newTask: true,
-        completed: false,
-        failed: true,
-        title: "Configure CI/CD pipeline",
-        date: "2025-01-29",
-        category: "Operations",
-        description: "Set up and configure the CI/CD pipeline for the project.",
-      },
-      {
-        active: true,
-        newTask: false,
-        completed: false,
-        failed: false,
-        title: "Update security patches",
-        date: "2025-01-25",
-        category: "Security",
-        description: "Apply the latest security patches to the system.",
-      },
-      {
-        active: false,
-        newTask: true,
-        completed: false,
-        failed: false,
-        title: "Review project timeline",
-        date: "2025-01-26",
-        category: "Management",
-        description: "Analyze the project timeline for potential risks.",
-      },
-    ],
-  },
+  // Repeat similar logic for employees 4 and 5...
 ];
 
 const admin = [
   {
     id: 1,
+    name: "alice bober",
     email: "admin@example.com",
     password: "123",
   },
@@ -245,4 +194,5 @@ export const getLocalStorage = () => {
   const employees = JSON.parse(localStorage.getItem("employees"));
   const admin = JSON.parse(localStorage.getItem("admin"));
   //   console.log(data));
+  return { employees, admin };
 };

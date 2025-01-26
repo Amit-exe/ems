@@ -3,11 +3,11 @@ import Header from "../other/header";
 import TaskListNumbers from "../other/TaskListNumbers";
 import TaskList from "../TaskList/TaskList";
 
-const EmployeeDashboard = () => {
+const EmployeeDashboard = ({ handleLogout, data }) => {
   return (
     <div className="p-10 bg-[#1c1c1c] h-screen">
-      <Header />
-      <TaskListNumbers />
+      <Header handleLogout={handleLogout} data={data} />
+      <TaskListNumbers data={data} />
       <TaskList />
     </div>
   );
